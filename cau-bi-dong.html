@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài giảng Tiếng Anh</title>
+    <link rel="stylesheet" href="baigiang.css">
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <ul>
+                <a href="index.html" class="logo">🏠 Trang chủ</a>                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tiêu đề trang bài giảng -->
+    <header class="page-header">
+        <h2>Câu bị động</h2>
+        <p>Các video tham khảo</p>
+    </header>
+
+    <!-- Các chủ đề bài giảng -->
+    <section class="lesson-list">
+        <div class="lesson" onclick="showModal('video-1')">
+            <h3><a href="javascript:void(0);">Bài giảng 1</a></h3>
+            <p>VIDEO 1</p>
+        </div>
+        
+        <div class="lesson" onclick="showModal('video-2')">
+            <h3><a href="javascript:void(0);">Bài giảng 2</a></h3>
+            <p>VIDEO 2</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-3')">
+            <h3><a href="javascript:void(0);">Bài giảng 3</a></h3>
+            <p>VIDEO 3</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-4')">
+            <h3><a href="javascript:void(0);">Bài giảng 4</a></h3>
+            <p>VIDEO 4</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-5')">
+            <h3><a href="javascript:void(0);">Bài giảng 5</a></h3>
+            <p>VIDEO 5</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-6')">
+            <h3><a href="javascript:void(0);">Bài giảng 6</a></h3>
+            <p>VIDEO 6</p>
+        </div>
+    </section>
+
+    <!-- Modal Video 1 -->
+    <div id="video-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-1')">&times;</span>
+            <iframe src="https://youtube.com/embed/XZOHrT15Jfk?si=L-w05_ma9FxoHZL0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 2 -->
+    <div id="video-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-2')">&times;</span>
+            <iframe src="https://youtube.com/embed/znsFTejUQ-U?si=8QwFNoCo_4sJtKlw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 3 -->
+    <div id="video-3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-3')">&times;</span>
+            <iframe src="https://youtube.com/embed/a9GnbpR96Ow?si=gl_VVwhpJ-HI7Jiy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 4 -->
+    <div id="video-4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-4')">&times;</span>
+            <iframe src="https://youtube.com/embed/wGHXt79hLsw?si=aA_eZ5N4holkedom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 5 -->
+    <div id="video-5" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-5')">&times;</span>
+            <iframe src="https://youtube.com/embed/5ZE6fHqdic4?si=RviHyhefutp3niXb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 6 -->
+    <div id="video-6" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/rdu7VpPfkjk?si=seJy8C30OKq3_17l" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="baigiang.js"></script>
+
+</body>
+</html>

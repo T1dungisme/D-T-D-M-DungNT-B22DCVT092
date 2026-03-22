@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập trắc nghiệm</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="bai-tap.css">
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Thanh điều hướng -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">🏠 Trang chủ</a>
+    </nav>
+
+
+<!-- Bài tập -->
+<main class="quiz-page">
+    <h1>📝 Bài tập trắc nghiệm</h1>
+
+    <!-- Bài tập: Các thì trong tiếng Anh -->
+    <section class="quiz-category" id="thi-anh">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>1️⃣ Chọn câu đúng:</p>
+            <p><strong>"You ______ be quiet in the library."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="a"> A. can</label>
+                <label><input type="radio" name="q1" value="b"> B. must</label>
+                <label><input type="radio" name="q1" value="c"> C. may</label>
+            </div>
+            <button onclick="checkAnswer('q1', 'b')">Kiểm tra</button>
+            <p class="result" id="result-q1"></p>
+        </div>
+    </section>
+
+    <!-- Bài tập: Câu điều kiện -->
+    <section class="quiz-category" id="cau-dieu-kien">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>2️⃣ Chọn câu đúng:</p>
+            <p><strong>"He ______ swim when he was five years old."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="a"> A. can</label>
+                <label><input type="radio" name="q2" value="b"> B. could</label>
+                <label><input type="radio" name="q2" value="c"> C. must</label>
+            </div>
+            <button onclick="checkAnswer('q2', 'b')">Kiểm tra</button>
+            <p class="result" id="result-q2"></p>
+        </div>
+    </section>
+
+    <!-- Bài tập: Câu gián tiếp -->
+    <section class="quiz-category" id="cau-gian-tiep">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>3️⃣ Chọn câu đúng:</p>
+            <p><strong>"You ______ eat so much fast food. It's bad for your health."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="a"> A. should</label>
+                <label><input type="radio" name="q3" value="b"> B. must</label>
+                <label><input type="radio" name="q3" value="c"> C. can</label>
+            </div>
+            <button onclick="checkAnswer('q3', 'a')">Kiểm tra</button>
+            <p class="result" id="result-q3"></p>
+        </div>
+    </section>
+
+    <!-- Bài tập: Mệnh đề quan hệ -->
+    <section class="quiz-category" id="menh-de-quan-he">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>4️⃣ Chọn câu đúng:</p>
+            <p><strong>"If you want to pass the exam, you ______ study harder."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="a"> A. might</label>
+                <label><input type="radio" name="q4" value="b"> B. should</label>
+                <label><input type="radio" name="q4" value="c"> C. could</label>
+            </div>
+            <button onclick="checkAnswer('q4', 'b')">Kiểm tra</button>
+            <p class="result" id="result-q4"></p>
+        </div>
+    </section>
+
+    <!-- Bài tập: Câu bị động -->
+    <section class="quiz-category" id="cau-bi-dong">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>5️⃣ Chọn câu đúng:</p>
+            <p><strong>"Tom ______ be at home now. I just saw him at the supermarket."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="a"> A. can't</label>
+                <label><input type="radio" name="q5" value="b"> B. must</label>
+                <label><input type="radio" name="q5" value="c"> C. should</label>
+            </div>
+            <button onclick="checkAnswer('q5', 'a')">Kiểm tra</button>
+            <p class="result" id="result-q5"></p>
+        </div>
+    </section>
+
+    <!-- Bài tập: Modal verbs -->
+    <section class="quiz-category" id="modal-verbs">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>6️⃣ Chọn câu đúng:</p>
+            <p><strong>"She ______ speak three languages fluently."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="a"> A. can</label>
+                <label><input type="radio" name="q6" value="b"> B. must</label>
+                <label><input type="radio" name="q6" value="c"> C. should</label>
+            </div>
+            <button onclick="checkAnswer('q6', 'a')">Kiểm tra</button>
+            <p class="result" id="result-q6"></p>
+        </div>
+    </section>
+
+    <section class="quiz-category" id="modal-verbs">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>7️⃣ Chọn câu đúng:</p>
+            <p><strong>"You ______ park here. It's a no-parking zone."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="a"> A. mustn't</label>
+                <label><input type="radio" name="q7" value="b"> B. shouldn't</label>
+                <label><input type="radio" name="q7" value="c"> C. don't have to</label>
+            </div>
+            <button onclick="checkAnswer('q7', 'a')">Kiểm tra</button>
+            <p class="result" id="result-q7"></p>
+        </div>
+    </section>
+
+    <section class="quiz-category" id="modal-verbs">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>8️⃣ Chọn câu đúng:</p>
+            <p><strong>"John ______ finish the project by tomorrow. The deadline is strict."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="a"> A. has to</label>
+                <label><input type="radio" name="q8" value="b"> B. should</label>
+                <label><input type="radio" name="q8" value="c"> C. may</label>
+            </div>
+            <button onclick="checkAnswer('q8', 'a')">Kiểm tra</button>
+            <p class="result" id="result-q8"></p>
+        </div>
+    </section>
+
+    <section class="quiz-category" id="modal-verbs">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p>9️⃣  Chọn câu đúng:</p>
+            <p><strong>"She ______ be in her office, but I'm not sure."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q9" value="a"> A. must</label>
+                <label><input type="radio" name="q9" value="b"> B. might</label>
+                <label><input type="radio" name="q9" value="c"> C. have to</label>
+            </div>
+            <button onclick="checkAnswer('q9', 'b')">Kiểm tra</button>
+            <p class="result" id="result-q9"></p>
+        </div>
+    </section>
+
+    <section class="quiz-category" id="modal-verbs">
+        <h2>📌 Động từ khuyết thiếu</h2>
+        <div class="quiz">
+            <p> 🔟 Chọn câu đúng:</p>
+            <p><strong>"I ______ call you later if I have time."</strong></p>
+            <div class="answers">
+                <label><input type="radio" name="q10" value="a"> A. may</label>
+                <label><input type="radio" name="q10" value="b"> B. must</label>
+                <label><input type="radio" name="q10" value="c"> C. has to</label>
+            </div>
+            <button onclick="checkAnswer('q10', 'a')">Kiểm tra</button>
+            <p class="result" id="result-q10"></p>
+        </div>
+    </section>
+
+</main>
+
+    <script src="bai-tap-dtkt.js"></script>
+
+</body>
+</html>

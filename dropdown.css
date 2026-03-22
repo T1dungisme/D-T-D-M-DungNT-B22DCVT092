@@ -1,0 +1,78 @@
+/* Mũi tên xuống */
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(45deg);
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown dạng lưới cho Bài giảng & Bài tập */
+.grid-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 260px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Style các ô vuông */
+.grid-dropdown-content a {
+    display: block;
+    background: #f8f8f8;
+    padding: 14px;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.grid-dropdown-content a:hover {
+    background: #e0e0e0;
+}

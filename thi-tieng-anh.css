@@ -1,0 +1,307 @@
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.page-header h2 {
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    font-size: 1.4em;
+    color: #dfe6e9;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Lesson List */
+.lesson-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 2s ease-out;
+}
+
+.lesson-list:hover {
+    transform: scale(1.05);
+}
+
+.lesson {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #ff9e2a, #f05f57);
+    overflow: hidden;
+}
+
+.lesson:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.lesson h3 a {
+    font-size: 1.6em;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.lesson h3 a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+.lesson p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
+}
+
+.modal .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+}
+
+.modal button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 4px;
+}
+
+.modal button:hover {
+    background-color: #c0392b;
+}
+
+/* Dropdown Menu Styles */
+.grid-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .grid-dropdown-content {
+    display: block;
+}
+
+.grid-dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.grid-dropdown-content a:hover {
+    background-color: #2c3e50;
+}
+
+/* Reset CSS to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* CSS cho modal */
+.modal {
+    display: none; /* Ẩn mặc định */
+    position: fixed; /* Đặt ở vị trí cố định */
+    z-index: 1; /* Đảm bảo modal luôn hiển thị trên tất cả */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .nav-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-left ul a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar .nav-left ul a:hover {
+    background-color: #555;
+}
+
+.page-header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.lesson-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lesson {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lesson:hover {
+    background-color: #ddd;
+}

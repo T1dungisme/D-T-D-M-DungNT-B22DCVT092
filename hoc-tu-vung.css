@@ -1,0 +1,211 @@
+/* Kích hoạt cuộn mượt */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Chỉ áp dụng cho trang học từ vựng */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+
+    padding: 6px 12px; /* Giảm padding */
+    height: 45px; /* Thu nhỏ chiều cao */
+    font-size: 14px; /* Giảm cỡ chữ */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* Không dùng border-radius để tránh bị lệch */
+    position: fixed; /* Giữ navbar cố định khi cuộn */
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Giữ navbar trên cùng */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.nav-right ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-right li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-right a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.navbar a {
+    font-size: 25px; /* Chữ trên thanh nhỏ hơn */
+    padding: 3px 6px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    height: 45px;
+}
+
+.logo:hover {
+    text-decoration: underline;
+}
+/* Mục lục */
+.table-of-contents {
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    width: 200px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.table-of-contents h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents li {
+    margin: 8px 0;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+/* Thêm khoảng cách trên đầu mỗi phần để tránh bị che mất */
+.vocab-category {
+    scroll-margin-top: 80px;  /* Đảm bảo tiêu đề không bị che khuất */
+    padding-top: 10px;
+}
+
+/* Học từ vựng */
+.vocabulary-page {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Chủ đề từ vựng */
+.vocab-category {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.vocab-category:hover {
+    transform: translateY(-5px);
+    background: #e9ecef;
+}
+
+.vocab-category h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Danh sách từ vựng */
+.word-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.word-list li {
+    background: white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.word-list li:hover {
+    transform: scale(1.03);
+    background: #f1f3f5;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 180px;
+}
+
+.dropdown-content li {
+    padding: 8px 15px;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

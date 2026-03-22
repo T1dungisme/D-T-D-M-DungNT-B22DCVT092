@@ -1,0 +1,105 @@
+/* Cấu hình chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Hộp chứa bài kiểm tra */
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Ô câu hỏi */
+.quiz-box {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #2196f3;
+}
+
+/* Câu hỏi */
+.question {
+    text-align: left;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+/* Định dạng các đáp án thành một hàng ngang */
+.answers {
+    display: flex;
+    justify-content: space-around; /* Cách đều nhau */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.answers label {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.answers input {
+    margin-right: 8px;
+}
+
+/* Kết quả đúng/sai */
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* Nút kiểm tra */
+.check-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto;
+}
+
+.check-btn:hover {
+    background: #0056b3;
+}
+
+/* Kết quả */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Nút trang chủ */
+.home-link {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.home-link a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.home-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,223 @@
+/* Tổng thể trang */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Căn chỉnh logo sang bên phải và loại bỏ gạch chân */
+.logo {
+    position: absolute; /* Đặt vị trí tuyệt đối trong phần tử cha */
+    right: 20px; /* Đẩy logo sang bên phải */
+    top: 20px; /* Điều chỉnh khoảng cách từ trên cùng của phần tử cha */
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+.logo img {
+    width: 40px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto;
+}
+
+/* Khung bài tập */
+.quiz-page {
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Câu hỏi */
+.quiz-category {
+    margin-top: 50px;
+    padding: 20px;
+    background: #fff3e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards ease-in-out;
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Câu hỏi */
+.quiz-category p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.quiz-category strong {
+    font-size: 22px;
+    color: #007bff;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Đảm bảo các đáp án thẳng hàng */
+.quiz .answers {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các đáp án theo chiều dọc */
+    align-items: flex-start; /* Căn chỉnh các đáp án từ bên trái */
+    gap: 10px; /* Khoảng cách giữa các đáp án */
+    margin-top: 15px;
+}
+
+/* Căn chỉnh câu hỏi */
+.quiz p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quiz-category .answers label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #444;
+}
+
+.quiz-category .answers input[type="radio"] {
+    margin-right: 12px;
+}
+
+/* Bỏ nút kiểm tra */
+/* .quiz button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.quiz button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+} */
+
+/* Hiển thị kết quả */
+.result {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.result.correct {
+    color: green;
+}
+
+.result.incorrect {
+    color: red;
+}
+
+/* Cải tiến cho phần hiển thị câu hỏi */
+.quiz-category {
+    margin-top: 40px;
+    background: #f0f8ff;
+    border-left: 5px solid #007bff;
+}
+
+/* Cải tiến cho thanh sidebar */
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    width: 240px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    display: block;
+    color: #007bff;
+    font-size: 16px;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #f0f0f0;
+    padding-left: 10px;
+}
+
+/* Chế độ sáng (Mặc định) */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Chế độ tối */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px; /* Đặt nút ở góc dưới */
+    left: 20px; /* Đặt nút sát mép trái */
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Giữ nút luôn hiển thị */
+}
+
+.dark-mode-toggle:hover {
+    background-color: #666;
+}
+
+
+p {
+    margin-bottom: 40px; /* Tăng khoảng cách giữa các đoạn văn */
+}
+
+h4, h5 {
+    margin-top: 40px;  /* Tăng khoảng cách trên tiêu đề */
+    margin-bottom: 20px; /* Tăng khoảng cách dưới tiêu đề */
+}

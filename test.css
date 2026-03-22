@@ -1,0 +1,126 @@
+/* Tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Hộp câu hỏi */
+.quiz-box {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #2196f3;
+}
+
+/* Câu hỏi */
+.question {
+    text-align: left;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+/* Định dạng đáp án */
+.answers {
+    display: flex;
+    justify-content: space-between; /* Các đáp án cách đều nhau */
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Đáp án tự xuống dòng nếu không đủ chỗ */
+}
+
+.answers label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1; /* Chia đều không gian giữa các đáp án */
+    text-align: center;
+    justify-content: center;
+}
+
+/* Định dạng radio button */
+.answers input {
+    margin-right: 5px;
+}
+
+/* Nút kiểm tra */
+.check-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto;
+}
+
+.check-btn:hover {
+    background: #0056b3;
+}
+
+/* Kết quả */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Màu sắc cho kết quả đúng/sai */
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* Nút Trang chủ */
+.home-link {
+    position: absolute;
+    top: 10px;
+    left: 20px; /* Đưa về góc trái */
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.home-link:hover {
+    color: #0056b3;
+}
+#quizForm button {
+    display: block; /* Hiển thị như một khối */
+    margin: 20px auto; /* Căn giữa theo chiều ngang */
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#quizForm button:hover {
+    background-color: #0056b3;
+}

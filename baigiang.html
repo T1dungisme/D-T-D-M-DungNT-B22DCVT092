@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài giảng Tiếng Anh</title>
+    <link rel="stylesheet" href="baigiang.css">
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <ul>
+                <a href="index.html" class="logo">🏠 Trang chủ</a>                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tiêu đề trang bài giảng -->
+    <header class="page-header">
+        <h2>Các bài giảng Tiếng Anh</h2>
+        <p>Chọn một chủ đề để bắt đầu học.</p>
+    </header>
+
+    <!-- Các chủ đề bài giảng -->
+    <section class="lesson-list">
+        <div class="lesson" onclick="showModal('video-1')">
+            <h3><a href="javascript:void(0);">Các thì trong tiếng Anh</a></h3>
+            <p>Học các thì cơ bản trong tiếng Anh.</p>
+        </div>
+        
+        <div class="lesson" onclick="showModal('video-2')">
+            <h3><a href="javascript:void(0);">Câu điều kiện</a></h3>
+            <p>Khám phá các cấu trúc câu điều kiện.</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-3')">
+            <h3><a href="javascript:void(0);">Câu gián tiếp</a></h3>
+            <p>Hướng dẫn về cách chuyển đổi câu trực tiếp thành gián tiếp.</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-4')">
+            <h3><a href="javascript:void(0);">Mệnh đề quan hệ</a></h3>
+            <p>Hiểu về các mệnh đề quan hệ và cách sử dụng chúng trong câu.</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-5')">
+            <h3><a href="javascript:void(0);">Câu bị động</a></h3>
+            <p>Cách dùng câu bị động trong tiếng Anh.</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-6')">
+            <h3><a href="javascript:void(0);">Động từ khuyết thiếu</a></h3>
+            <p>Giới thiệu về các động từ khiếm khuyết trong tiếng Anh.</p>
+        </div>
+    </section>
+
+    <!-- Modal Video 1 -->
+    <div id="video-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-1')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/bCngYqYPTGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 2 -->
+    <div id="video-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-2')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/eXPLu9Rk3aE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 3 -->
+    <div id="video-3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-3')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/mBxYiziqYiM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 4 -->
+    <div id="video-4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-4')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/hVmkGO_jsjE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 5 -->
+    <div id="video-5" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-5')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/5ZE6fHqdic4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 6 -->
+    <div id="video-6" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/wwEQ-Dqs87g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="baigiang.js"></script>
+
+</body>
+</html>

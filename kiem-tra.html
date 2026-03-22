@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài giảng Tiếng Anh</title>
+    <link rel="stylesheet" href="kiem-tra.css">
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <ul>
+                <a href="index.html" class="logo">🏠 Trang chủ</a>                
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h2>Kiểm tra</h2>
+        <p>Các đề tham khảo</p>
+    </header>
+
+    <section class="lessonx-list grid-container">
+        <div class="lesson" onclick="goToTest('test-1.html')">TEST 1</div>
+        <div class="lesson" onclick="goToTest('test-2.html')">TEST 2</div>
+        <div class="lesson" onclick="goToTest('test-3.html')">TEST 3</div>
+        <div class="lesson" onclick="goToTest('test-4.html')">TEST 4</div>
+        <div class="lesson" onclick="goToTest('test-5.html')">TEST 5</div>
+        <div class="lesson" onclick="goToTest('test-6.html')">TEST 6</div>
+        <div class="lesson" onclick="goToTest('test-7.html')">TEST 7</div>
+        <div class="lesson" onclick="goToTest('test-8.html')">TEST 8</div>
+        <div class="lesson" onclick="goToTest('test-9.html')">TEST 9</div>
+    </section>
+    <script src="baigiang.js"></script>
+
+</body>
+</html>

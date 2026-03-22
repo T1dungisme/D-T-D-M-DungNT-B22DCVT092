@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài giảng Tiếng Anh</title>
+    <link rel="stylesheet" href="thi-tieng-anh.css">
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <ul>
+                <a href="index.html" class="logo">🏠 Trang chủ</a>                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tiêu đề trang bài giảng -->
+    <header class="page-header">
+        <h2>Các thì trong tiếng Anh</h2>
+        <p>Các video tham khảo</p>
+    </header>
+
+    <!-- Các chủ đề bài giảng -->
+    <section class="lesson-list">
+        <div class="lesson" onclick="showModal('video-1')">
+            <h3><a href="javascript:void(0);">Hiện tại đơn</a></h3>
+            <p>PRESENT SIMPLE</p>
+        </div>
+        
+        <div class="lesson" onclick="showModal('video-2')">
+            <h3><a href="javascript:void(0);">Hiện tại tiếp diễn</a></h3>
+            <p>PRESENT CONTINUOUS</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-3')">
+            <h3><a href="javascript:void(0);">Hiện tại hoàn thành</a></h3>
+            <p>PRESENT PERFECT</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-4')">
+            <h3><a href="javascript:void(0);">Hiện tại hoàn thành tiếp diễn</a></h3>
+            <p>PRESENT PERFECT CONTINUOUS</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-5')">
+            <h3><a href="javascript:void(0);">Quá khứ đơn</a></h3>
+            <p>PAST SIMPLE</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-6')">
+            <h3><a href="javascript:void(0);">Quá khứ tiếp diễn</a></h3>
+            <p>PAST CONTUNUOUS</p>
+        </div>
+         <div class="lesson" onclick="showModal('video-7')">
+            <h3><a href="javascript:void(0);">Quá khứ hoàn thành</a></h3>
+            <p>PAST PERFECT CONTINUOUS</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-8')">
+            <h3><a href="javascript:void(0);">Quá khứ hoàn thành tiếp diễn</a></h3>
+            <p>PAST PERFECT CONTINUOUS</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-9')">
+            <h3><a href="javascript:void(0);">Tương lai đơn</a></h3>
+            <p>FUTURE SIMPLE</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-10')">
+            <h3><a href="javascript:void(0);">Tương lai tiếp diễn</a></h3>
+            <p>FUTURE CONTINUOUS</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-11')">
+            <h3><a href="javascript:void(0);">Tương lai hoàn thành</a></h3>
+            <p>FUTURE PERFECT</p>
+        </div>
+
+        <div class="lesson" onclick="showModal('video-12')">
+            <h3><a href="javascript:void(0);">Thì tương lai hoàn thành tiếp diễn</a></h3>
+            <p>FUTURE PERFECT CONT</p>
+        </div>
+
+
+    </section>
+
+    <!-- Modal Video 1 -->
+    <div id="video-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-1')">&times;</span>
+            <iframe src="https://www.youtube.com/embed/2rohVIy3v1U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+    <!-- Modal Video 2 -->
+    <div id="video-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-2')">&times;</span>
+            <iframe src="https://youtube.com/embed/_8DXjppSoyk?si=b8VIzi-lBn72zX7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 3 -->
+    <div id="video-3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-3')">&times;</span>
+            <iframe src="https://youtube.com/embed/PbGnR-5gYpk?si=PHLGSu2QCKnBX5Pe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 4 -->
+    <div id="video-4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-4')">&times;</span>
+            <iframe src="https://youtube.com/embed/h-cprKWQmY0?si=xJej8GQRciY-Gmwf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>  
+
+    <!-- Modal Video 5 -->
+    <div id="video-5" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-5')">&times;</span>
+            <iframe src="https://youtube.com/embed/lmCBxXztfEY?si=kDZ7WrFAUFm7Ybr-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 6 -->
+    <div id="video-6" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/ygcboZ7Jpvs?si=xGeijZE2p8mla-Pb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 7 -->
+    <div id="video-7" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/_DCeOxI6G44?si=g5jCeLIP5S51XJuN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 8 -->
+    <div id="video-8" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/nOid1SbUo1k?si=g7oXKpqqlPRattlT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 9 -->
+    <div id="video-9" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/0Y_o_rSYiVI?si=ZeXx329livEq0HMq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 10 -->
+    <div id="video-10" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/7d0MpOr9x0o?si=fQQlQSToOLmrgG1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 11 -->
+    <div id="video-11" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/OmjAJXeKeIg?si=5gW6qykbg2o0gYJh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Video 12 -->
+    <div id="video-12" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('video-6')">&times;</span>
+            <iframe src="https://youtube.com/embed/VopXfpb3IAk?si=WqgvepUgr7T_Xt98" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="baigiang.js"></script>
+
+</body>
+</html>

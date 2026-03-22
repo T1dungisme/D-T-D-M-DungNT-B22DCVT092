@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Học Tiếng Anh</title>
+    <!-- Liên kết với các file CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="banner.css">
+    <!-- <link rel="stylesheet" href="buttons.css"> -->
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modal.css">
+
+</head>
+<script src="dark-mode.js"></script>
+
+<body>
+
+    <!-- Navbar Component -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <span class="logo-text">MUNLISH</span>
+            <ul>
+                <li><a href="#" id="home-link">Trang chủ</a></li>
+
+                <!-- Dropdown Bài giảng -->
+                <li class="dropdown">
+                    <a class="dropbtn">Bài giảng <span class="arrow"></span></a>
+                    <div class="grid-dropdown-content">
+                        <a href="thi-tieng-anh.html">Các thì trong tiếng Anh</a>
+                        <a href="cau-dieu-kien.html">Câu điều kiện</a>
+                        <a href="cau-truc-tiep-gian-tiep.html">Câu trực tiếp & gián tiếp</a>
+                        <a href="menday-quan-he.html">Mệnh đề quan hệ</a>
+                        <a href="cau-bi-dong.html">Câu bị động</a>
+                        <a href="modal-verbs.html">Động từ khuyết thiếu</a>
+                        <a href="cau-hoi-duoi.html">Câu hỏi đuôi</a>
+                        <a href="cau-don-cau-ghep.html">Câu đơn & câu ghép</a>
+                    </div>
+                </li>
+
+                <!-- Dropdown Bài tập -->
+                <li class="dropdown">
+                    <a class="dropbtn">Bài tập <span class="arrow"></span></a>
+                    <div class="grid-dropdown-content">
+                        <a href="bai-tap-thi-tieng-anh.html">Các thì trong tiếng Anh</a>
+                        <a href="bai-tap-cau-dieu-kien.html">Câu điều kiện</a>
+                        <a href="bai-tap-cau-truc-tiep-gian-tiep.html">Câu trực tiếp & gián tiếp</a>
+                        <a href="bai-tap-mdqh.html">Mệnh đề quan hệ</a>
+                        <a href="bai-tap-cau-bi-dong.html">Câu bị động</a>
+                        <a href="bai-tap-dtkt.html">Động từ khuyết thiếu</a>
+                        <a href="bai-tap-cau-hoi-duoi.html">Câu hỏi đuôi</a>
+                        <a href="bai-tap-cau-don-cau-ghep.html">Câu đơn & câu ghép</a>
+                    </div>
+                </li>
+
+                <!-- Dropdown Tài liệu -->
+                <li class="dropdown">
+                    <a href="kiem-tra.html" class="dropbtn">Kiểm tra </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <span id="userDisplay">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Icon" class="user-icon">
+                <span class="username">ThanhPham</span>
+            </span>
+            <a href="#" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+            </a>
+        
+            <ul class="auth-links">
+                <li><a href="#" id="login-link" class="btn-login">Đăng nhập</a></li>
+                <li><a href="#" id="register-link" class="btn-signup">Đăng ký</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Nút Đăng nhập và Đăng ký -->
+<a href="#" id="login-link">Đăng nhập</a> | <a href="#" id="register-link">Đăng ký</a>
+
+<!-- Modal Đăng nhập -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <input type="text" placeholder="Tên đăng nhập" id="username">
+        <input type="password" placeholder="Mật khẩu" id="password">
+        <button id="loginBtn">Đăng nhập</button>
+    </div>
+</div>
+
+<!-- Modal Đăng ký -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close register-close">&times;</span>
+        <h2>Đăng ký</h2>
+        <input type="text" placeholder="Tên đăng nhập" id="register-username">
+        <input type="email" placeholder="Email" id="register-email">
+        <input type="password" placeholder="Mật khẩu" id="register-password">
+        <input type="password" placeholder="Nhập lại mật khẩu" id="register-password-confirm">
+        <button id="registerBtn">Đăng ký</button>
+    </div>
+</div>
+
+
+    <!-- Banner Component -->
+    <header class="banner">
+        <img src="assets/banner.jpg" alt="Học Tiếng Anh">
+        <div class="banner-text">
+            <h3 class="welcome-text">WELCOME TO MUNLISH</h3>
+            <p>Học tiếng Anh dễ dàng – Chinh phục thế giới!🚀</p>
+        </div>
+    </header>
+
+<!-- Features Component: Main Content -->
+<main>
+    <section class="features">
+        <!-- Feature 1: Học từ vựng -->
+        <div class="feature">
+            <a href="hoc-tu-vung.html">
+                <img src="assets/vocabulary.png" alt="Từ vựng">
+                <h3>Học từ vựng</h3>
+                <p>Cải thiện vốn từ.</p>
+            </a>
+        </div>
+
+        <!-- Feature 2: Học ngữ pháp -->
+        <div class="feature">
+            <a href="hoc-ngu-phap.html">
+                <img src="assets/grammar.png" alt="Ngữ pháp">
+                <h3>Học ngữ pháp</h3>
+                <p>Nắm chắc ngữ pháp.</p>
+            </a>
+        </div>
+
+        <!-- Feature 3: Bài tập trắc nghiệm -->
+        <div class="feature">
+            <a href="bai-tap-trac-nghiem.html">
+                <img src="assets/quiz.png" alt="Bài tập">
+                <h3>Bài tập trắc nghiệm</h3>
+                <p>Kiểm tra kiến thức với các câu hỏi đa dạng.</p>
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- Thêm Footer với thông tin liên hệ -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 MUNLISH</p>
+        <p>Email: BophanCSKH@website.com</a></p>
+        <p>Phone: +84 375819829</a></p>
+    </div>
+</footer>
+
+    <!-- Script Components -->
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="loginModal.js"></script>
+    <script src="registerModal.js"></script>
+    <script src="dropdownMenu.js"></script>
+    <script src="smoothScroll.js"></script>
+    <script src="observation.js"></script>
+    <script src="logout.js"></script>
+
+    <!-- Nút Messenger cố định -->
+<a href="https://m.me/Hoshinon0201" target="_blank" class="messenger-btn">
+    <img src="assets/messenger-icon.png" alt="Messenger">
+</a>
+
+
+
+
+<button id="darkModeToggle" class="dark-mode-toggle">🌙 Chế độ tối</button>
+
+</body>
+
+</html>

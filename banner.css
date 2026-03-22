@@ -1,0 +1,26 @@
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Điều chỉnh chiều cao theo mong muốn */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 25%; /* Giảm từ 50% xuống 35% để đẩy chữ lên cao hơn */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Bóng nhẹ giúp chữ dễ đọc */
+}

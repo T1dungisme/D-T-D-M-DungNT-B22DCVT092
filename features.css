@@ -1,0 +1,53 @@
+/* Nội dung chính */
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 80px;
+    padding: 80px;
+    flex-wrap: nowrap; /* Cho phép các phần tử xếp hàng khi màn hình nhỏ */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    overflow-x: auto; /* Cho phép cuộn ngang nếu nội dung quá rộng */
+    white-space: nowrap; /* Ngăn các phần tử bị ngắt dòng */
+}
+
+.feature {
+    text-align: center;
+    background: none !important; /* Loại bỏ nền */
+    padding: 1px;
+    border-radius: 10px;
+    width: 400px;
+    opacity: 0; /* Ban đầu ẩn các phần tử */
+    transform: translateY(50px); /* Đẩy các phần tử xuống dưới */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+}
+
+.feature h3 {
+    margin-top: 10px;
+    color: #007BFF;
+}
+
+.feature p {
+    color: #555;
+}
+
+.features a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit; /* Giữ nguyên màu chữ */
+    display: block; /* Giúp cả box có thể nhấn được */
+}
+
+.feature:hover {
+    transform: scale(2.05); /* Khi di chuột vào, ô sẽ phóng to nhẹ */
+}
+
+/* Định nghĩa hiệu ứng slideUp */
+.feature.show {
+    opacity: 1;
+    transform: translateY(0); /* Di chuyển lên vị trí ban đầu */
+}

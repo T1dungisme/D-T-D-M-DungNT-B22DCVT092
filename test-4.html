@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Quiz</title>
+    <link rel="stylesheet" href="test.css">
+    <a href="index.html" class="home-link">🏠 Trang chủ</a>
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>📝 Bài kiểm tra số 4 </h2>
+        <form id="quizForm">
+            <div id="quiz"></div>
+            <button id="submit-btn" type="button" onclick="submitQuiz()">Nộp bài</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="test-4.js"></script>
+</body>
+</html>

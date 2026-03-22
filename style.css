@@ -1,0 +1,301 @@
+/* Cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Cập nhật navbar */
+/* Navbar */
+/* Thanh điều hướng chính */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    padding: 12px 24px;
+    height: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* Không dùng border-radius để tránh bị lệch */
+    
+    position: fixed; /* Giữ navbar cố định khi cuộn */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Giữ navbar trên cùng */
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    height: 45px;
+}
+
+.nav-left ul, .nav-right ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-left li, .nav-right li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Mũi tên xuống */
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(45deg);
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown dạng lưới cho Bài giảng & Bài tập */
+.grid-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 260px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Style các ô vuông */
+.grid-dropdown-content a {
+    display: block;
+    background: #f8f8f8;
+    padding: 14px;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.grid-dropdown-content a:hover {
+    background: #e0e0e0;
+}
+
+
+
+/* Modal đăng nhập */
+.modal {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Làm mờ nền */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background: #0056b3;
+}
+
+/* Nút đóng */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Tăng chiều cao của banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Tránh tràn nội dung */
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 25%; /* Giảm từ 50% xuống 35% để đẩy chữ lên cao hơn */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Bóng nhẹ giúp chữ dễ đọc */
+}
+
+/* Nội dung chính */
+.feature {
+    text-align: center;
+    background: #fff; /* Đổi màu nền thành trắng để đồng bộ */
+    padding: 50px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+}
+
+.feature h3 {
+    margin-top: 10px;
+    color: #007BFF;
+}
+
+.feature p {
+    color: #555;
+}
+
+.feature a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit; /* Giữ nguyên màu chữ */
+    display: block; /* Giúp cả box có thể nhấn được */
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* Màu nền và màu chữ cho nút Đăng nhập */
+.btn-login {
+    background-color: rgb(202, 51, 51);
+    color: white !important;
+}
+
+.btn-login:hover {
+    background-color: #c0392b; /* Màu đỏ đậm hơn khi hover */
+}
+
+/* Màu nền và màu chữ cho nút Đăng ký */
+.btn-signup {
+    background-color: rgb(63, 63, 221);
+    color: rgb(255, 255, 255) !important;
+}
+
+.btn-signup:hover {
+    background-color: #2980b9; /* Xanh dương đậm hơn khi hover */
+}

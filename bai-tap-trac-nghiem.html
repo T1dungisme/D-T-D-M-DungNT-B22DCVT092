@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI TẬP TRẮC NGHIỆM</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="hoc-ngu-phap.css">    
+    <link rel="stylesheet" href="reset.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script>
+        // Nếu không tìm thấy tên người dùng trong bộ nhớ (chưa đăng nhập)
+        if (!localStorage.getItem("username")) {
+            alert("🔒 Bạn cần đăng nhập để trở thành Member và sử dụng chức năng này!");
+            window.location.href = "index.html"; // Lập tức đuổi về trang chủ
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Thanh điều hướng -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">🏠 Trang chủ</a>
+
+        <div class="nav-right">
+            <ul>
+                <li><a href="kiem-tra.html"><i class="fas fa-pencil-alt"></i> Kiểm tra</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Thanh mục lục -->
+    <aside class="sidebar">
+        <h3>📖 Mục Lục</h3>
+        <ul>
+            <li><a href="#thi-tieng-anh">1.Các thì trong tiếng Anh</a></li>
+            <li><a href="#cau-dieu-kien">2.Câu điều kiện</a></li>
+            <li><a href="#cau-gian-tiep">3.Câu gián tiếp</a></li>
+            <li><a href="#menh-de-quan-he">4.Mệnh đề quan hệ</a></li>
+            <li><a href="#cau-bi-dong">5.Câu bị động</a></li>
+            <li><a href="#modal-verbs">6.Cách dùng modal verbs</a></li>
+            <li><a href="#modal-verbs">7.Câu hỏi đuôi</a></li>
+            <li><a href="#modal-verbs">8.Câu đơn & câu ghép</a></li>
+        </ul>
+    </aside>
+
+    <!-- Nội dung chính -->
+    <main class="grammar-page">
+        <h1>📚 BÀI TẬP TRẮC NGHIỆM</h1>
+
+        <!-- Chủ đề 1: Các thì trong tiếng Anh -->
+        <section class="grammar-category" id="thi-tieng-anh">
+            <h2><a href="bai-tap-thi-tieng-anh.html" style="text-decoration: none; color: inherit;">📌 Các thì trong tiếng Anh</a></h2>
+            <p>Giới thiệu chi tiết về các thì cơ bản trong tiếng Anh, gồm 12 thì chính.</p>
+        </section>
+
+        <!-- Chủ đề 2: Câu điều kiện -->
+        <section class="grammar-category" id="cau-dieu-kien">
+            <h2><a href="bai-tap-cau-dieu-kien.html" style="text-decoration: none; color: inherit;">📌 Câu điều kiện</a></h2>
+            <p>Giải thích cách sử dụng câu điều kiện loại 0, 1, 2, 3 và mixed conditional.</p>
+        </section>
+
+        <!-- Chủ đề 3: Câu gián tiếp -->
+        <section class="grammar-category" id="cau-gian-tiep">
+            <h2><a href="bai-tap-cau-truc-tiep-gian-tiep.html" style="text-decoration: none; color: inherit;">📌 Câu gián tiếp</a></h2>
+            <p>Cách chuyển đổi từ câu trực tiếp sang câu gián tiếp.</p>
+        </section>
+
+        <!-- Chủ đề 4: Mệnh đề quan hệ -->
+        <section class="grammar-category" id="menh-de-quan-he">
+            <h2><a href="bai-tap-mdqh.html" style="text-decoration: none; color: inherit;">📌 Mệnh đề quan hệ</a></h2>
+            <p>Phân biệt các loại mệnh đề quan hệ như defining và non-defining.</p>
+        </section>
+
+        <!-- Chủ đề 5: Câu bị động -->
+        <section class="grammar-category" id="cau-bi-dong">
+            <h2><a href="bai-tap-cau-bi-dong.html" style="text-decoration: none; color: inherit;">📌 Câu bị động</a></h2>
+            <p>Hướng dẫn chuyển đổi câu chủ động sang câu bị động trong các thì.</p>
+        </section>
+
+        <!-- Chủ đề 6: Cách dùng modal verbs -->
+        <section class="grammar-category" id="modal-verbs">
+            <h2><a href="bai-tap-dtkt.html" style="text-decoration: none; color: inherit;">📌 Cách dùng modal verbs</a></h2>
+            <p>Giới thiệu cách dùng modal verbs như can, could, may, might, must,...</p>
+        </section>
+
+        <section class="grammar-category" id="modal-verbs">
+            <h2><a href="bai-tap-cau-hoi-duoi.html" style="text-decoration: none; color: inherit;">📌 Câu hỏi đuôi</a></h2>
+            <p>Giới thiệu các dạng câu hỏi đuôi, cách dùng,...</p>
+        </section>
+
+        <section class="grammar-category" id="modal-verbs">
+            <h2><a href="bai-tap-cau-don-cau-ghep.html" style="text-decoration: none; color: inherit;">📌 Câu đơn & câu ghép</a></h2>
+            <p>Hướng dẫn phân biệt thế nào là câu đơn, câu ghép.</p>
+        </section>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* Màu nền và màu chữ cho nút Đăng nhập */
+.btn-login {
+    background-color: rgb(202, 51, 51);
+    color: white !important;
+    padding: 12px 20px; /* Thêm padding để nút lớn hơn */
+    margin-right: 15px; /* Tạo khoảng cách bên phải giữa các nút */
+    border-radius: 5px; /* Tạo góc bo tròn */
+}
+
+.btn-login:hover {
+    background-color: #c0392b; /* Màu đỏ đậm hơn khi hover */
+}
+
+/* Màu nền và màu chữ cho nút Đăng ký */
+.btn-signup {
+    background-color: rgb(63, 63, 221);
+    color: rgb(255, 255, 255) !important;
+    padding: 12px 20px; /* Thêm padding để nút lớn hơn */
+    border-radius: 5px; /* Tạo góc bo tròn */
+}
+
+.btn-signup:hover {
+    background-color: #2980b9; /* Xanh dương đậm hơn khi hover */
+}
